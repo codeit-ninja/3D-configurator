@@ -70,10 +70,8 @@ export class Configurator {
     constructor(protected gltf: GLTF, protected element: HTMLElement) {
         this.scene = new THREE.Scene()
         this.renderer = new THREE.WebGLRenderer({ antialias: true })
-        this.renderer.toneMapping = THREE.ACESFilmicToneMapping
-        this.renderer.toneMappingExposure = 1
-        this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
-        this.camera.position.set(150, 150, 150)
+        this.camera = new THREE.PerspectiveCamera(75, element.clientWidth / element.clientHeight, 0.1, 1000)
+        this.controls = new OrbitControls(this.camera, this.renderer.domElement)
 
         const model = gltf.scene
 
@@ -102,12 +100,12 @@ export class Configurator {
         this.initRenderer()
         this.initScene()
 
-        this.controls = new OrbitControls(this.camera, this.renderer.domElement)
-        this.controls.enableDamping = true
-        this.controls.dampingFactor = 0.05
-        this.controls.maxDistance = 500
-
         this.render()
+    }
+
+    protected init() {
+        this.initRenderer()
+        this.initScene()
     }
 
     protected initRenderer() {
@@ -115,6 +113,15 @@ export class Configurator {
 
         this.renderer.setSize(width, height)
         this.renderer.setClearColor(new THREE.Color(1, 1, 1), 1)
+
+        this.renderer.toneMapping = THREE.CineonToneMapping
+        this.renderer.toneMappingExposure = 1
+
+        this.controls.enableDamping = true
+        this.controls.dampingFactor = 0.05
+        this.controls.maxDistance = 500
+
+        this.camera.position.set(150, 150, 150)
     }
 
     protected initScene() {

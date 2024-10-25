@@ -1,15 +1,10 @@
 import * as THREE from 'three'
+import { Mesh } from './mesh'
 
-export class Frame {
-    /**
-     * Three MeshStandardMaterial
-     *
-     * @readonly
-     */
-    readonly material: THREE.MeshStandardMaterial
-
+export class Frame extends Mesh {
     constructor(readonly mesh: THREE.Mesh) {
-        this.material = this.mesh.material as THREE.MeshStandardMaterial
+        super(mesh)
+
         this.material.color.set(0x000000)
     }
 }

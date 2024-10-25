@@ -1,9 +1,12 @@
 import * as THREE from 'three'
+import { Mesh } from './mesh'
 
-export class Lens {
+export class Lens extends Mesh {
     readonly material: THREE.MeshPhysicalMaterial
 
     constructor(readonly mesh: THREE.Mesh) {
+        super(mesh)
+
         this.material = new THREE.MeshPhysicalMaterial({
             color: 0xe73240,
             metalness: 0.8,
@@ -19,7 +22,16 @@ export class Lens {
         this.mesh.material = this.material
     }
 
-    setColor(color: THREE.ColorRepresentation) {
-        this.material.color.set(color)
+    /**
+     * Sets the transparency of the lens
+     *
+     * @example
+     * ```typescript
+     * .setTransparency(0.5)
+     * ```
+     * @param value
+     */
+    setTransparency(value: number) {
+        this.material.opacity = value
     }
 }

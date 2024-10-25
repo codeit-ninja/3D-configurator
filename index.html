@@ -1,14 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <link rel="stylesheet" type="text/css" href="/src/style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vite + TS</title>
     </head>
     <body>
-        <div id="app"></div>
+        <div id="app" class="flex h-screen w-screen">
+            <div id="controls" class="min-w-[350px] bg-slate-100">
+                <div class="p-4">
+                    <h4 class="mb-4 text-lg font-bold">Lens color</h4>
+                    <div class="flex gap-3">
+                        <label>
+                            <input type="radio" name="color" value="#DB6404" class="peer hidden" id="color-1" />
+                            <label
+                                for="color-1"
+                                class="block h-8 w-8 rounded-full bg-gradient-to-br from-[#DB6404] to-[#DB6404]/40 peer-checked:ring-4 peer-checked:ring-purple-500/40 peer-checked:ring-offset-1"
+                            ></label>
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="#E162C3" class="peer hidden" id="color-2" />
+                            <label
+                                for="color-2"
+                                class="block h-8 w-8 rounded-full bg-gradient-to-br from-[#E162C3] to-[#E162C3]/40 peer-checked:ring-4 peer-checked:ring-purple-500/40 peer-checked:ring-offset-1"
+                            ></label>
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="#6D11DD" class="peer hidden" id="color-3" />
+                            <label
+                                for="color-3"
+                                class="block h-8 w-8 rounded-full bg-gradient-to-br from-[#6D11DD] to-[#6D11DD]/40 peer-checked:ring-4 peer-checked:ring-purple-500/40 peer-checked:ring-offset-1"
+                            ></label>
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="#434343" class="peer hidden" id="color-4" />
+                            <label
+                                for="color-4"
+                                class="block h-8 w-8 rounded-full bg-gradient-to-br from-[#434343] to-[#434343]/40 peer-checked:ring-4 peer-checked:ring-purple-500/40 peer-checked:ring-offset-1"
+                            ></label>
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="#5CB1E9" class="peer hidden" id="color-5" />
+                            <label
+                                for="color-5"
+                                class="block h-8 w-8 rounded-full bg-gradient-to-br from-[#5CB1E9] to-[#5CB1E9]/40 peer-checked:ring-4 peer-checked:ring-purple-500/40 peer-checked:ring-offset-1"
+                            ></label>
+                        </label>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h4 class="mb-4 text-lg font-bold">Frame color</h4>
+                    <div class="flex gap-3">
+                        <label>
+                            <input
+                                type="radio"
+                                name="frame-color"
+                                value="#dcdcdc"
+                                class="peer hidden"
+                                id="frame-color-1"
+                            />
+                            <label
+                                for="frame-color-1"
+                                class="block h-8 w-8 rounded-full bg-gradient-to-br from-[#dcdcdc] to-[#dcdcdc]/40 peer-checked:ring-4 peer-checked:ring-purple-500/40 peer-checked:ring-offset-1"
+                            ></label>
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="frame-color"
+                                value="#242424"
+                                class="peer hidden"
+                                id="frame-color-2"
+                            />
+                            <label
+                                for="frame-color-2"
+                                class="block h-8 w-8 rounded-full bg-gradient-to-br from-[#242424] to-[#242424]/40 peer-checked:ring-4 peer-checked:ring-purple-500/40 peer-checked:ring-offset-1"
+                            ></label>
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="frame-color"
+                                value="#474747"
+                                class="peer hidden"
+                                id="frame-color-3"
+                            />
+                            <label
+                                for="frame-color-3"
+                                class="block h-8 w-8 rounded-full bg-gradient-to-br from-[#474747] to-[#474747]/40 peer-checked:ring-4 peer-checked:ring-purple-500/40 peer-checked:ring-offset-1"
+                            ></label>
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="frame-color"
+                                value="#da6b6b"
+                                class="peer hidden"
+                                id="frame-color-4"
+                            />
+                            <label
+                                for="frame-color-4"
+                                class="block h-8 w-8 rounded-full bg-gradient-to-br from-[#da6b6b] to-[#da6b6b]/40 peer-checked:ring-4 peer-checked:ring-purple-500/40 peer-checked:ring-offset-1"
+                            ></label>
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="frame-color"
+                                value="#08616a"
+                                class="peer hidden"
+                                id="frame-color-5"
+                            />
+                            <label
+                                for="frame-color-5"
+                                class="block h-8 w-8 rounded-full bg-gradient-to-br from-[#08616a] to-[#08616a]/40 peer-checked:ring-4 peer-checked:ring-purple-500/40 peer-checked:ring-offset-1"
+                            ></label>
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="frame-color"
+                                value="#9e873d"
+                                class="peer hidden"
+                                id="frame-color-6"
+                            />
+                            <label
+                                for="frame-color-6"
+                                class="block h-8 w-8 rounded-full bg-gradient-to-br from-[#9e873d] to-[#9e873d]/40 peer-checked:ring-4 peer-checked:ring-purple-500/40 peer-checked:ring-offset-1"
+                            ></label>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div id="configurator" class="flex-grow"></div>
+        </div>
         <script type="module" src="/src/main.ts"></script>
     </body>
 </html>

@@ -10,10 +10,16 @@
   },
   "devDependencies": {
     "@types/three": "^0.169.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "tailwindcss": "^3.4.14",
     "typescript": "^5.5.3",
     "vite": "^5.4.8"
   },
   "dependencies": {
+    "ammo.js": "^0.0.10",
     "three": "^0.169.0"
   }
 }
