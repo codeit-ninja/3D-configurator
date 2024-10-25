@@ -12,7 +12,7 @@ export class Lens {
             iridescenceIOR: 1.2,
             ior: 0.02,
             transparent: true,
-            opacity: 0.99,
+            opacity: 0.95,
             reflectivity: 0,
         })
 
